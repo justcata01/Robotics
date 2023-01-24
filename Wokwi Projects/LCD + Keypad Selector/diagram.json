@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "author": "cata",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 64.2, "left": 310, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 60.09, "left": 30.11, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -61.66,
+      "left": 624.18,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd2",
+      "top": -76.57,
+      "left": 312.93,
+      "attrs": { "pins": "i2c" }
+    },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": 274.6,
+      "left": 339.45,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "bb1:bp.25", "bb1:tp.25", "black", [ "v0.43", "h72.61", "v-174.18" ] ],
+    [ "uno:GND.3", "bb1:bn.1", "black", [ "v26.87", "h6.53" ] ],
+    [ "uno:5V", "bb1:bp.1", "red", [ "v46.27", "h140.28", "v-4.85" ] ],
+    [ "lcd2:GND", "bb1:tp.1", "black", [ "h-18.47", "v118.99" ] ],
+    [ "bz1:1", "bb1:tp.24", "black", [ "v33.07", "h-52.47", "v1.62" ] ],
+    [ "lcd2:VCC", "bb1:1t.a", "red", [ "h-13.62", "v7.66" ] ],
+    [ "lcd2:SDA", "uno:A4", "gold", [ "h0" ] ],
+    [ "lcd2:SCL", "uno:A5", "blue", [ "h0" ] ],
+    [
+      "bz1:2",
+      "uno:13",
+      "red",
+      [ "v3.71", "h37.73", "v-119.59", "h-409.84", "v51.06", "h-18.81", "v38.97", "h-5.37" ]
+    ],
+    [ "keypad1:R1", "uno:12", "green", [ "v17.48", "h-429.98", "v-586.54", "h157.37" ] ],
+    [ "keypad1:R2", "uno:11", "green", [ "v26.42", "h-448.92", "v-602.64", "h169.88" ] ],
+    [ "keypad1:R3", "uno:10", "green", [ "v35.37", "h-467.27", "v-619.22", "h184.42" ] ],
+    [ "keypad1:R4", "uno:9", "green", [ "v41.37", "h-490.27", "v-634.21", "h215.9", "v4.5" ] ],
+    [ "keypad1:C1", "uno:8", "green", [ "v50.37", "h-510.26", "v-652.2", "h238.39" ] ],
+    [ "keypad1:C2", "uno:7", "green", [ "v63.86", "h-536.25", "v-679.19", "h38.98" ] ],
+    [ "keypad1:C3", "uno:6", "green", [ "v68.36", "h-561", "v-698.68", "h16.49" ] ],
+    [ "keypad1:C4", "uno:5", "green", [ "v75.85", "h-594.74", "v-713.67", "h317.86" ] ]
+  ],
+  "dependencies": {}
+}
