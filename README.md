@@ -1,2 +1,2 @@
 # Robotics
-Robotics / IoT stuff on wokwi / plain code
+More or less a way for me to store up my wokwi projects / plain code for IoT & stuff.
