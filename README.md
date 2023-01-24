@@ -1,2 +1,2 @@
 # Robotics
-Robotics or IoT stuff on wokwi / plain code
+Robotics / IoT stuff on wokwi / plain code
