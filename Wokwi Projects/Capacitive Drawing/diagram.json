@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "cata",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 28.95, "left": -92.83, "attrs": {} },
+    {
+      "type": "board-ili9341-cap-touch",
+      "id": "lcd1",
+      "top": -310.74,
+      "left": -35.46,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -152.14,
+      "left": 180.91,
+      "attrs": { "color": "red", "bounce": "1" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "lcd1:VCC", "uno:VIN", "red", [ "v42.64", "h-113.31", "v221.97", "h10.67" ] ],
+    [ "lcd1:SCK", "uno:13", "green", [ "v25.57", "h-20.44" ] ],
+    [ "lcd1:CS", "uno:10", "red", [ "v41.57", "h39.3", "v2.13" ] ],
+    [ "lcd1:D/C", "uno:9", "violet", [ "v34.1", "h8.36" ] ],
+    [ "lcd1:MOSI", "uno:11", "cyan", [ "v0" ] ],
+    [ "lcd1:MISO", "uno:12", "gold", [ "v33.04", "h-0.16" ] ],
+    [ "lcd1:SCL", "uno:A5", "green", [ "v37.31", "h123.64", "v229.44", "h-10.67" ] ],
+    [ "lcd1:SDA", "uno:A4", "orange", [ "v25.57", "h122.57", "v248.65", "h-6.4" ] ],
+    [ "btn1:1.l", "uno:GND.3", "black", [ "h-23.72", "v121.53", "h81.43", "v259.47", "h-2.76" ] ],
+    [ "btn1:2.r", "uno:4", "red", [ "h16.23", "v110.87", "h-152.3" ] ]
+  ],
+  "dependencies": {}
+}
